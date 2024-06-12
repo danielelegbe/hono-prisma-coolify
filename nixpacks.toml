@@ -1,4 +1,0 @@
-nixpkgsArchive = 'fb713bf76ef45e1c673620be0d07a237c45b91da'
-
-[start]
-cmd = "bun run src/index.ts"

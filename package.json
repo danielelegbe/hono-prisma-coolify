@@ -1,11 +1,13 @@
 {
+  "type": "module",
   "scripts": {
-    "dev": "bun run --hot src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "migrate-dev": "prisma migrate dev && bun run src/lib/seedTriggers.ts",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "build": "tsc"
   },
   "dependencies": {
-    "@hono/swagger-ui": "^0.2.2",
+    "@hono/node-server": "^1.11.2",
     "@hono/zod-validator": "^0.2.2",
     "@prisma/client": "5.15.0",
     "hono": "^4.4.5",
@@ -15,6 +17,8 @@
     "zod-prisma-types": "^3.1.8"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "tsx": "^4.15.2",
+    "typescript": "^5.4.5"
   }
 }
