@@ -1,9 +1,12 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
+import { postsApp } from "routes/posts";
+import { logger } from "hono/logger";
+import { swaggerUI } from "@hono/swagger-ui";
 
-const app = new Hono()
+const api = new Hono().basePath("/api");
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+api.use(logger());
 
-export default app
+api.route("/posts", postsApp);
+
+export default api;
