@@ -5,6 +5,13 @@
     "jsxImportSource": "hono/jsx",
     "esModuleInterop": true,
     "baseUrl": "./src",
-    "strictNullChecks": true
-  }
+    "strictNullChecks": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  },
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
 }
